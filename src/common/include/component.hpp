@@ -5,7 +5,6 @@
 
 class ComponentBase {
 public:
-  virtual ~ComponentBase() = default;
   virtual STATUS Initialize() = 0;
   virtual STATUS Update() = 0;
   virtual STATUS Destroy() = 0;

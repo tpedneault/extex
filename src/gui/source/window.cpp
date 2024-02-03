@@ -1,5 +1,5 @@
 #include "window.hpp"
-#include "GLFW/glfw3.h"
+#include "spdlog/spdlog.h"
 
 Window::Window(UINT32 width, UINT32 height, CSTR title)
     : m_Width(width), m_Height(height), m_Title(title) {}
@@ -8,6 +8,7 @@ Window::~Window() {}
 
 STATUS Window::Initialize() {
   if (!glfwInit()) {
+    spdlog::error("Failed to initialize GLFW.");
     return FAILURE;
   }
 
@@ -17,11 +18,13 @@ STATUS Window::Initialize() {
   m_Window = glfwCreateWindow(1280, 720, "Hello", nullptr, nullptr);
   glfwMakeContextCurrent(m_Window);
 
+  glewExperimental = GL_TRUE;
   if (glewInit() != GLEW_OK) {
+    spdlog::error("Failed to initialize GLEW.");
     return FAILURE;
   }
 
-  return FAILURE;
+  return SUCCESS;
 }
 
 STATUS Window::Update() {

@@ -15,6 +15,6 @@ using INT64  = int64_t;
 
 using CSTR = const char*;
 
-typedef enum { SUCCESS, FAILURE, EINVAL, EIO, ETIMEDOUT } STATUS;
+typedef enum { SUCCESS, FAILURE } STATUS;
 
 #endif /* TYPES_H */

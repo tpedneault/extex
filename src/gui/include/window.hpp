@@ -1,10 +1,11 @@
 #ifndef WINDOW_H
 #define WINDOW_H
 
+#include "component.hpp"
+
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
-
-#include "component.hpp"
+#include <spdlog/spdlog.h>
 
 class Window : public ComponentBase {
 public:
