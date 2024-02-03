@@ -1,3 +1,9 @@
+/**
+ * @file    font.hpp
+ * @author  Thomas Pedneault
+ * @date    2024-02-03
+ */
+
 #ifndef FONT_H
 #define FONT_H
 

@@ -13,3 +13,6 @@
 [submodule "freetype"]
 	path = thirdparty/freetype
 	url = https://github.com/freetype/freetype
+[submodule "doxygen-awesome-css"]
+	path = thirdparty/doxygen-awesome-css
+	url = https://github.com/jothepro/doxygen-awesome-css.git
