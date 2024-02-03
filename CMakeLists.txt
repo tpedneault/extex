@@ -37,8 +37,9 @@ add_subdirectory(thirdparty/glfw)
 add_subdirectory(thirdparty/glew-cmake)
 add_subdirectory(thirdparty/glm)
 add_subdirectory(thirdparty/spdlog)
+add_subdirectory(thirdparty/freetype)
 
 # Compilation
 
 add_executable(${PROJECT_NAME} ${PROJECT_SOURCES})
-target_link_libraries(${PROJECT_NAME} ${OPENGL_LIBRARIES} glfw libglew_static glm spdlog)
+target_link_libraries(${PROJECT_NAME} ${OPENGL_LIBRARIES} glfw libglew_static glm spdlog freetype)

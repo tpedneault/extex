@@ -1,5 +1,4 @@
 #include "vao.hpp"
-#include "vbo.hpp"
 
 STATUS VertexArrayObject::Initialize() {
   glGenVertexArrays(1, &m_ID);

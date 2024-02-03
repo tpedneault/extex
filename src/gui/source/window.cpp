@@ -15,7 +15,7 @@ STATUS Window::Initialize() {
   glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
   glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
 
-  m_Window = glfwCreateWindow(1280, 720, "Hello", nullptr, nullptr);
+  m_Window = glfwCreateWindow(m_Width, m_Height, m_Title, nullptr, nullptr);
   glfwMakeContextCurrent(m_Window);
 
   glewExperimental = GL_TRUE;

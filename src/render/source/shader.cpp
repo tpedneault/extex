@@ -1,9 +1,5 @@
 #include "shader.hpp"
 
-Shader::Shader() {
-  m_isCompiled = false;
-}
-
 STATUS Shader::Initialize() {
   m_ID = glCreateProgram();
   return SUCCESS;
