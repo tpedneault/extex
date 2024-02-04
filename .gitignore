@@ -34,3 +34,6 @@
 .cache/*
 build/*
 compile_commands.json
+
+html/*
+latex/*

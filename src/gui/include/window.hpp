@@ -5,7 +5,6 @@
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
-#include <spdlog/spdlog.h>
 
 /**
  * @class Window
@@ -74,10 +73,10 @@ public:
   bool IsWindowOpen();
 
 private:
-  GLFWwindow *m_Window; /**< Pointer to the GLFW window object. */
-  UINT32 m_Width;       /**< Width of the window in pixels. */
-  UINT32 m_Height;      /**< Height of the window in pixels. */
-  CSTR m_Title;         /**< Title of the window. */
+  GLFWwindow *m_Window; ///< Pointer to the GLFW window object.
+  UINT32 m_Width;       ///< Width of the window in pixels.
+  UINT32 m_Height;      ///< Height of the window in pixels.
+  CSTR m_Title;         ///< Title of the window.
 };
 
 #endif /* WINDOW_H */

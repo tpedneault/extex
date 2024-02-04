@@ -1,5 +1,7 @@
 #include "vbo.hpp"
 
+#include <spdlog/spdlog.h>
+
 STATUS VertexBufferObject::Initialize() {
   glGenBuffers(1, &m_ID);
   return SUCCESS;

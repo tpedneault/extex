@@ -1,5 +1,6 @@
 #include "window.hpp"
-#include "spdlog/spdlog.h"
+
+#include <spdlog/spdlog.h>
 
 Window::Window(UINT32 width, UINT32 height, CSTR title)
     : m_Width(width), m_Height(height), m_Title(title) {}

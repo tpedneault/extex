@@ -4,8 +4,6 @@
 #include "window.hpp"
 #include "renderer.hpp"
 
-#include <spdlog/spdlog.h>
-
 class ExtexApplication {
 public:
   ExtexApplication() = default;

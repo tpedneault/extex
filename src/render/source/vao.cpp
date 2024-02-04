@@ -1,5 +1,7 @@
 #include "vao.hpp"
 
+#include <spdlog/spdlog.h>
+
 STATUS VertexArrayObject::Initialize() {
   glGenVertexArrays(1, &m_ID);
   return SUCCESS;

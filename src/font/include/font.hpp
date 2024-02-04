@@ -1,15 +1,8 @@
-/**
- * @file    font.hpp
- * @author  Thomas Pedneault
- * @date    2024-02-03
- */
-
 #ifndef FONT_H
 #define FONT_H
 
 #include <freetype2/ft2build.h>
-#include <spdlog/spdlog.h>
-#include FT_FREETYPE_H /**< This is actually how its supposed to be included. */
+#include FT_FREETYPE_H
 
 #include "types.hpp"
 
@@ -73,9 +66,9 @@ public:
   STATUS LoadGlyph(char glyph);
 
 private:
-  CSTR m_path;          /**< Path to the font file. */
-  FT_Library m_library; /**< FreeType library instance. */
-  FT_Face m_face;       /**< FreeType face object for the loaded font. */
+  CSTR m_path;          ///< Path to the font file.
+  FT_Library m_library; ///< FreeType library instance.
+  FT_Face m_face;       ///< FreeType face object for the loaded font.
 };
 
 #endif /* FONT_H */

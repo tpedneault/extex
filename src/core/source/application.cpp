@@ -1,6 +1,6 @@
 #include "application.hpp"
-#include "spdlog/spdlog.h"
-#include "types.hpp"
+
+#include <spdlog/spdlog.h>
 
 #define INITIALIZE_COMPONENT(component, errorMessage)                          \
   do {                                                                         \

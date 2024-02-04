@@ -1,5 +1,6 @@
 #include "font.hpp"
-#include "freetype/freetype.h"
+
+#include <spdlog/spdlog.h>
 
 Font::Font(CSTR fontPath) : m_path(fontPath) {}
 

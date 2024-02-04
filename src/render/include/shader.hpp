@@ -4,7 +4,6 @@
 #include "types.hpp"
 
 #include <GL/glew.h>
-#include <spdlog/spdlog.h>
 
 /**
  * @class Shader
@@ -83,7 +82,7 @@ public:
   STATUS CompileProgram();
 
 private:
-  UINT32 m_ID; /**< The OpenGL ID of the shader program. */
+  UINT32 m_ID; ///< The OpenGL ID of the shader program.
 };
 
 #endif /* SHADER_H */

@@ -109,7 +109,7 @@ private:
   STATUS LoadBufferData(VERTEX_BUFFER_TYPES vboType, GLenum target,
                         INT32 dataSizeBytes, const void *data);
 
-  UINT32 m_ID; /**< OpenGL ID of the vertex array object managed by this VAO. */
+  UINT32 m_ID; ///< OpenGL ID of the vertex array object managed by this VAO.
 
   /**
    * @brief Array of pointers to VBOs for different types of vertex data.
