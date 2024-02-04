@@ -1,4 +1,8 @@
 #include "shader.hpp"
+#include "spdlog/spdlog.h"
+
+#include <fstream>
+#include <sstream>
 
 STATUS Shader::Initialize() {
   m_ID = glCreateProgram();
@@ -33,7 +37,7 @@ STATUS Shader::AddShader(GLenum type, CSTR source) {
     char message[1024];
 
     glGetShaderInfoLog(shaderID, 1024, &logLength, message);
-    spdlog::error("Failed to compile shader. Message: %s", message);
+    spdlog::error("Failed to compile shader {}. Message: {}.", type, message);
     status = FAILURE;
   }
   else {
@@ -41,6 +45,22 @@ STATUS Shader::AddShader(GLenum type, CSTR source) {
   }
 
   return status;
+}
+
+STATUS Shader::AddShaderFromFile(GLenum type, CSTR path) {
+  std::ifstream fin(path);
+  if (fin.fail()) {
+    spdlog::error("Failed to read shader, can't access file: '{}'.", path);
+    return FAILURE;
+  }
+  std::stringstream buffer;
+  buffer << fin.rdbuf();
+  const std::string source = buffer.str();
+  if (source.empty()) {
+    spdlog::error("Failed to read shader, file is empty: '{}'.", path);
+  }
+
+  return AddShader(type, source.c_str());
 }
 
 STATUS Shader::CompileProgram() {
@@ -54,7 +74,7 @@ STATUS Shader::CompileProgram() {
     char message[1024];
 
     glGetProgramInfoLog(m_ID, 1024, &logLength, message);
-    spdlog::error("Failed to link shader program. Message: %s", message);
+    spdlog::error("Failed to link shader program. Message: {}.", message);
     status = FAILURE;
   }
 

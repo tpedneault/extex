@@ -62,6 +62,16 @@ public:
   STATUS AddShader(GLenum type, CSTR source);
 
   /**
+   * @brief Adds a shader of the given type to the shader program.
+   *
+   * Loads the contents of the provided file, compiles the source code, and
+   * attaches it to the shader program. If compilation fails, an error is logged
+   * with the compilation message.
+   *
+   */
+  STATUS AddShaderFromFile(GLenum type, CSTR path);
+
+  /**
    * @brief Links the attached shaders into a complete shader program.
    *
    * After successfully attaching vertex and fragment shaders, this method
