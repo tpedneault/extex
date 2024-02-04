@@ -12,5 +12,6 @@ var hierarchy =
     ] ],
     [ "Shader", "classShader.html", null ],
     [ "VertexArrayObject", "classVertexArrayObject.html", null ],
+    [ "VertexAttributeData", "structVertexAttributeData.html", null ],
     [ "VertexBufferObject", "classVertexBufferObject.html", null ]
 ];

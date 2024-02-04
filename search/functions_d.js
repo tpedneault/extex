@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['_7eextexapplication_0',['~ExtexApplication',['../classExtexApplication.html#ae8ce29f563a85b21c164774524c082cc',1,'ExtexApplication']]],
-  ['_7erenderingjob_1',['~RenderingJob',['../classRenderingJob.html#a1c71c01355b7acd0b077bb76ad388f55',1,'RenderingJob']]],
-  ['_7ewindow_2',['~Window',['../classWindow.html#a245d821e6016fa1f6970ccbbedd635f6',1,'Window']]]
+  ['window_0',['Window',['../classWindow.html#aa2cada65b6af434f5e38b19bee0dec00',1,'Window']]]
 ];

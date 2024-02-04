@@ -9,6 +9,7 @@ var annotated_dup =
     [ "Shader", "classShader.html", "classShader" ],
     [ "TextRenderingJob", "classTextRenderingJob.html", "classTextRenderingJob" ],
     [ "VertexArrayObject", "classVertexArrayObject.html", "classVertexArrayObject" ],
+    [ "VertexAttributeData", "structVertexAttributeData.html", "structVertexAttributeData" ],
     [ "VertexBufferObject", "classVertexBufferObject.html", "classVertexBufferObject" ],
     [ "Window", "classWindow.html", "classWindow" ]
 ];

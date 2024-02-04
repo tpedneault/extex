@@ -100,12 +100,14 @@ $(function(){initNavTree('vbo_8hpp.html',''); initResizable(); });
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="types_8hpp_source.html">types.hpp</a>&quot;</code><br />
 <code>#include &lt;GL/glew.h&gt;</code><br />
-<code>#include &lt;spdlog/spdlog.h&gt;</code><br />
 </div>
 <p><a href="vbo_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVertexAttributeData.html">VertexAttributeData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds data required to specify an attribute in a vertex buffer.  <a href="structVertexAttributeData.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertexBufferObject.html">VertexBufferObject</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manages OpenGL vertex buffer objects (VBOs).  <a href="classVertexBufferObject.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -124,8 +126,39 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:acbd16bf3eae8e1dae6b33e35f132ee79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerates the types of buffers a <a class="el" href="classVertexBufferObject.html" title="Manages OpenGL vertex buffer objects (VBOs).">VertexBufferObject</a> can manage.  <a href="#acbd16bf3eae8e1dae6b33e35f132ee79">More...</a><br /></td></tr>
 <tr class="separator:acbd16bf3eae8e1dae6b33e35f132ee79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e73adb4ea3e5c3e473d555a89e71d1f" id="r_a5e73adb4ea3e5c3e473d555a89e71d1f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e73adb4ea3e5c3e473d555a89e71d1f">VERTEX_ATTRIB_LOCATION</a> { <a class="el" href="#a5e73adb4ea3e5c3e473d555a89e71d1fa372a82f5ce3a8ee640867598ee2ddaf7">POSITIONS</a> = 0
+, <a class="el" href="#a5e73adb4ea3e5c3e473d555a89e71d1fa7fbc5fc8021a1bda887fc4449cca4623">NORMALS</a> = 1
+, <a class="el" href="#a5e73adb4ea3e5c3e473d555a89e71d1fa1324eb47ab83877cc090be2372fe30b1">TEX_COORDS</a> = 2
+ }</td></tr>
+<tr class="memdesc:a5e73adb4ea3e5c3e473d555a89e71d1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines standard locations for vertex attributes.  <a href="#a5e73adb4ea3e5c3e473d555a89e71d1f">More...</a><br /></td></tr>
+<tr class="separator:a5e73adb4ea3e5c3e473d555a89e71d1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a5e73adb4ea3e5c3e473d555a89e71d1f" name="a5e73adb4ea3e5c3e473d555a89e71d1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e73adb4ea3e5c3e473d555a89e71d1f">&#9670;&#160;</a></span>VERTEX_ATTRIB_LOCATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a5e73adb4ea3e5c3e473d555a89e71d1f">VERTEX_ATTRIB_LOCATION</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Defines standard locations for vertex attributes. </p>
+<p>This enumeration specifies standard locations for various types of vertex attributes in a shader program. By standardizing the locations of common attributes, it helps ensure consistency across different shaders and simplifies the binding of vertex buffer data to shader inputs. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5e73adb4ea3e5c3e473d555a89e71d1fa372a82f5ce3a8ee640867598ee2ddaf7" name="a5e73adb4ea3e5c3e473d555a89e71d1fa372a82f5ce3a8ee640867598ee2ddaf7"></a>POSITIONS&#160;</td><td class="fielddoc"><p>Location 0 is reserved for vertex positions. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5e73adb4ea3e5c3e473d555a89e71d1fa7fbc5fc8021a1bda887fc4449cca4623" name="a5e73adb4ea3e5c3e473d555a89e71d1fa7fbc5fc8021a1bda887fc4449cca4623"></a>NORMALS&#160;</td><td class="fielddoc"><p>Location 1 is reserved for vertex normals. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5e73adb4ea3e5c3e473d555a89e71d1fa1324eb47ab83877cc090be2372fe30b1" name="a5e73adb4ea3e5c3e473d555a89e71d1fa1324eb47ab83877cc090be2372fe30b1"></a>TEX_COORDS&#160;</td><td class="fielddoc"><p>Location 2 is reserved for texture coordinates. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="acbd16bf3eae8e1dae6b33e35f132ee79" name="acbd16bf3eae8e1dae6b33e35f132ee79"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acbd16bf3eae8e1dae6b33e35f132ee79">&#9670;&#160;</a></span>VERTEX_BUFFER_TYPES</h2>
 
