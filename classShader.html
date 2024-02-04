@@ -121,6 +121,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab69ed7d0488e2b1f063c783666f6d954" id="r_ab69ed7d0488e2b1f063c783666f6d954"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8hpp.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab69ed7d0488e2b1f063c783666f6d954">AddShader</a> (GLenum type, <a class="el" href="types_8hpp.html#a3be90ab66d9c1bec3eafb484f5d2307d">CSTR</a> source)</td></tr>
 <tr class="memdesc:ab69ed7d0488e2b1f063c783666f6d954"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a shader of the given type to the shader program.  <br /></td></tr>
 <tr class="separator:ab69ed7d0488e2b1f063c783666f6d954"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dd8e2faa3c5f9efaaeb7302e67a9c4c" id="r_a0dd8e2faa3c5f9efaaeb7302e67a9c4c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8hpp.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0dd8e2faa3c5f9efaaeb7302e67a9c4c">AddShaderFromFile</a> (GLenum type, <a class="el" href="types_8hpp.html#a3be90ab66d9c1bec3eafb484f5d2307d">CSTR</a> path)</td></tr>
+<tr class="memdesc:a0dd8e2faa3c5f9efaaeb7302e67a9c4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a shader of the given type to the shader program.  <br /></td></tr>
+<tr class="separator:a0dd8e2faa3c5f9efaaeb7302e67a9c4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4b8e4d5793364ca3e3bc5008cefb025" id="r_af4b8e4d5793364ca3e3bc5008cefb025"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8hpp.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4b8e4d5793364ca3e3bc5008cefb025">CompileProgram</a> ()</td></tr>
 <tr class="memdesc:af4b8e4d5793364ca3e3bc5008cefb025"><td class="mdescLeft">&#160;</td><td class="mdescRight">Links the attached shaders into a complete shader program.  <br /></td></tr>
 <tr class="separator:af4b8e4d5793364ca3e3bc5008cefb025"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,6 +161,30 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>STATUS indicating the success of the shader compilation and attachment. </dd></dl>
+
+</div>
+</div>
+<a id="a0dd8e2faa3c5f9efaaeb7302e67a9c4c" name="a0dd8e2faa3c5f9efaaeb7302e67a9c4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dd8e2faa3c5f9efaaeb7302e67a9c4c">&#9670;&#160;</a></span>AddShaderFromFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8hpp.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a> Shader::AddShaderFromFile </td>
+          <td>(</td>
+          <td class="paramtype">GLenum</td>          <td class="paramname"><span class="paramname"><em>type</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8hpp.html#a3be90ab66d9c1bec3eafb484f5d2307d">CSTR</a></td>          <td class="paramname"><span class="paramname"><em>path</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a shader of the given type to the shader program. </p>
+<p>Loads the contents of the provided file, compiles the source code, and attaches it to the shader program. If compilation fails, an error is logged with the compilation message. </p>
 
 </div>
 </div>
