@@ -1,3 +1,21 @@
+/***************************************************************************************************/
+/*                                                                                                 */
+/*                       $$$$$$$$\ $$\   $$\ $$$$$$$$\ $$$$$$$$\ $$\   $$\                         */
+/*                       $$  _____|$$ |  $$ |\__$$  __|$$  _____|$$ |  $$ |                        */
+/*                       $$ |      $$\ $$  |   $$ |   $$ |      $$\ $$  |                          */
+/*                       $$$$$\     $$$$  /    $$ |   $$$$$\     $$$$  /                           */
+/*                       $$  __|    $$  $$<     $$ |   $$  __|    $$  $$<                          */
+/*                       $$ |      $$  /$$\    $$ |   $$ |      $$  /$$\                           */
+/*                       $$$$$$$$\ $$ /  $$ |   $$ |   $$$$$$$$\ $$ /  $$ |                        */
+/*                       \________|\__|  \__|   \__|   \________|\__|  \__|                        */
+/*                                                                                                 */
+/***************************************************************************************************/
+/* FILE NAME  : vbo.hpp                                                                            */
+/* DESCRIPTION: Implementation of OpenGL VBO (Vertex Buffer Object)                                */
+/* AUTHOR     : Thomas Pedneault                                                                   */
+/* DATE       : 2024-02-18                                                                         */
+/***************************************************************************************************/
+
 #ifndef VBO_H
 #define VBO_H
 
@@ -10,13 +28,13 @@
  * @brief Enumerates the types of buffers a VertexBufferObject can manage.
  */
 enum VERTEX_BUFFER_TYPES {
-  VERTEX_BUFFER = 0, /**< Vertex buffer for storing vertex attributes. */
-  INDEX_BUFFER = 1,  /**< Index buffer for storing vertex indices. */
-  TEXTURE_COORDS_BUFFER = 2, /**< Texture coordinates buffer. */
-  NORMAL_BUFFER = 3, /**< Normal vector buffer for lighting calculations. */
+  VERTEX_BUFFER = 0,            ///< Vertex buffer for storing vertex attributes.
+  INDEX_BUFFER = 1,             ///< Index buffer for storing vertex indices.
+  TEXTURE_COORDS_BUFFER = 2,    ///< Texture coordinates buffer.
+  NORMAL_BUFFER = 3,            ///< Normal vector buffer for lighting calculations.
 
-  FIRST = VERTEX_BUFFER, /**< Utility value to store the first enum entry. */
-  LAST = NORMAL_BUFFER   /**< Utility value to store the last enum entry. */
+  FIRST = VERTEX_BUFFER,        ///< Utility value to store the first enum entry.
+  LAST = NORMAL_BUFFER          ///< Utility value to store the last enum entry.
 };
 
 /**

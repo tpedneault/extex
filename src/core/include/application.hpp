@@ -3,6 +3,7 @@
 
 #include "window.hpp"
 #include "renderer.hpp"
+#include "editor.hpp"
 
 class ExtexApplication {
 public:
@@ -12,8 +13,10 @@ public:
   STATUS Start();
 
 private:
-  Window *m_Window;
-  Renderer *m_Renderer;
+  Window *m_window;
+  Editor *m_editor;
+  Renderer *m_renderer;
+
   STATUS m_lastStatus;
 };
 

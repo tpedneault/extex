@@ -1,33 +1,39 @@
 #include "renderer.hpp"
 
-STATUS Renderer::Initialize() {
-  m_testShader.Initialize();
-  m_testShader.AddShaderFromFile(GL_VERTEX_SHADER, "/home/thomas/Repos/extex/assets/shaders/vs.glsl");
-  m_testShader.AddShaderFromFile(GL_FRAGMENT_SHADER, "/home/thomas/Repos/extex/assets/shaders/fs.glsl");
-  m_testShader.CompileProgram();
+#include "spdlog/spdlog.h"
 
-  float vertices[] = {-0.5f, -0.5f, 0.0f, 0.5f, -0.5f, 0.0f, 0.0f, 0.5f, 0.0f};
-  m_testVAO.Initialize();
-  m_testVAO.LoadVertexBufferData(sizeof(vertices), vertices);
+STATUS Renderer::Initialize() {
+  // Initialize the renderers.
+  m_renderers[RENDERER_BACKGROUND] = new RendererBackground();
+
+  // Subscribe to each event this component should listen for.
+  Subscribe(EVENT_QUEUE_RENDER, BIND_EVENT_HANDLER(OnQueueRender));
 
   return SUCCESS;
 }
 
 STATUS Renderer::Update() {
-  glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-  glClear(GL_COLOR_BUFFER_BIT);
+  // Render all elements in the queue.
+  for(UINT16 i = 0; i < m_queueInsertPosition; i++) {
+    RENDERER_TYPE renderer = m_renderQueue[i]->GetRendererID();
+    m_renderers[renderer]->Render(m_renderQueue[i]);
+  }
 
-  m_testShader.Bind();
-  m_testVAO.Bind();
-
-  glDrawArrays(GL_TRIANGLES, 0, 3);
-
-  m_testVAO.Unbind();
-  m_testShader.Unbind();
+  // All items in the render queue were rendered, go back to the beginning of the queue.
+  m_queueInsertPosition = 0;
 
   return SUCCESS;
 }
 
 STATUS Renderer::Destroy() {
   return SUCCESS;
+}
+
+EVENT_HANDLER Renderer::OnQueueRender(const Event &e) {
+  if(m_queueInsertPosition >= RENDERER_QUEUE_MAX - 1) {
+    spdlog::error("Failed to add event to the queue. Queue is full.");
+  }
+
+  m_renderQueue[m_queueInsertPosition] = (ComponentRenderable*)e.data;
+  m_queueInsertPosition++;
 }

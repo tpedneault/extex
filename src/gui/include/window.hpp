@@ -15,7 +15,7 @@
  * destruction of a GLFW window. It also handles the initialization of GLEW for
  * OpenGL function loading.
  */
-class Window : public ComponentBase {
+class Window : public ComponentPubSub {
 public:
   /**
    * @brief Constructs a Window object with the specified dimensions and title.

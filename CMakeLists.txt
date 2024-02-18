@@ -20,13 +20,16 @@ include_directories(src/core/include)
 include_directories(src/font/include)
 include_directories(src/gui/include)
 include_directories(src/render/include)
+include_directories(src/editor/include)
 
 file(GLOB_RECURSE PROJECT_SOURCES "src/**/*.cpp")
 
 # Libraries
 
 find_package(OpenGL REQUIRED)
+find_package(Freetype REQUIRED)
 include_directories(${OPENGL_INCLUDE_DIRS})
+include_directories(${FREETYPE_INCLUDE_DIRS})
 
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
@@ -37,9 +40,8 @@ add_subdirectory(thirdparty/glfw)
 add_subdirectory(thirdparty/glew-cmake)
 add_subdirectory(thirdparty/glm)
 add_subdirectory(thirdparty/spdlog)
-add_subdirectory(thirdparty/freetype)
 
 # Compilation
 
 add_executable(${PROJECT_NAME} ${PROJECT_SOURCES})
-target_link_libraries(${PROJECT_NAME} ${OPENGL_LIBRARIES} glfw libglew_static glm spdlog freetype)
+target_link_libraries(${PROJECT_NAME} ${OPENGL_LIBRARIES} ${FREETYPE_LIBRARIES} glfw libglew_static glm spdlog)

@@ -2,9 +2,12 @@
 
 #include <spdlog/spdlog.h>
 
+#include "event_bus.hpp"
+
 #define INITIALIZE_COMPONENT(component, errorMessage)                          \
   do {                                                                         \
-    m_lastStatus = (component)->Initialize();                                  \
+    component->SetEventBus(&eventBus);                                         \
+    m_lastStatus = component->Initialize();                                    \
     if (m_lastStatus != SUCCESS) {                                             \
       spdlog::error(errorMessage);                                             \
       return m_lastStatus;                                                     \
@@ -12,19 +15,25 @@
   } while (0)
 
 STATUS ExtexApplication::Start() {
-  m_Window = new Window(1280, 720, "Extex");
-  m_Renderer = new Renderer();
+  EventBus eventBus;
 
-  INITIALIZE_COMPONENT(m_Window, "Failed to initialize Window.");
-  INITIALIZE_COMPONENT(m_Renderer, "Failed to initialize Renderer.");
+  m_window = new Window(1280, 720, "Extex");
+  m_editor = new Editor();
+  m_renderer = new Renderer();
 
-  while(m_Window->IsWindowOpen()) {
-    m_Window->Update();
-    m_Renderer->Update();
+  INITIALIZE_COMPONENT(m_window, "Failed to initialize Window.");
+  INITIALIZE_COMPONENT(m_editor, "Failed to initialize Editor.");
+  INITIALIZE_COMPONENT(m_renderer, "Failed to initialize Renderer.");
+
+  while(m_window->IsWindowOpen()) {
+    m_editor->Update();
+    m_window->Update();
+    m_renderer->Update();
   }
 
-  m_Renderer->Destroy();
-  m_Window->Destroy();
+  m_renderer->Destroy();
+  m_editor->Destroy();
+  m_window->Destroy();
 
   return SUCCESS;
 }

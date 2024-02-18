@@ -1,9 +1,28 @@
+/***************************************************************************************************/
+/*                                                                                                 */
+/*                       $$$$$$$$\ $$\   $$\ $$$$$$$$\ $$$$$$$$\ $$\   $$\                         */
+/*                       $$  _____|$$ |  $$ |\__$$  __|$$  _____|$$ |  $$ |                        */
+/*                       $$ |      $$\ $$  |   $$ |   $$ |      $$\ $$  |                          */
+/*                       $$$$$\     $$$$  /    $$ |   $$$$$\     $$$$  /                           */
+/*                       $$  __|    $$  $$<     $$ |   $$  __|    $$  $$<                          */
+/*                       $$ |      $$  /$$\    $$ |   $$ |      $$  /$$\                           */
+/*                       $$$$$$$$\ $$ /  $$ |   $$ |   $$$$$$$$\ $$ /  $$ |                        */
+/*                       \________|\__|  \__|   \__|   \________|\__|  \__|                        */
+/*                                                                                                 */
+/***************************************************************************************************/
+/* FILE NAME  : renderer.hpp                                                                       */
+/* DESCRIPTION: Main endering engine, receives and handles each render job.                        */
+/* AUTHOR     : Thomas Pedneault                                                                   */
+/* DATE       : 2024-02-15                                                                         */
+/***************************************************************************************************/
+
 #ifndef RENDERER_H
 #define RENDERER_H
 
-#include "component.hpp"
-#include "shader.hpp"
-#include "vao.hpp"
+#include "renderers/renderer_base.hpp"
+#include "renderers/renderer_background.hpp"
+
+#define RENDERER_QUEUE_MAX 1024
 
 /**
  * @class Renderer
@@ -15,14 +34,13 @@
  * the rendering resources, updating the rendering logic, and destroying the
  * resources.
  */
-class Renderer : public ComponentBase {
+class Renderer : public ComponentPubSub {
 public:
+  Renderer() {}
+  virtual ~Renderer() {}
+
   /**
    * @brief Initializes rendering resources.
-   *
-   * Sets up shaders and VAOs for rendering. This includes compiling shaders and
-   * loading vertex data into VAOs. This method should be called before any
-   * rendering operations are performed.
    *
    * @return STATUS indicating the success or failure of the initialization
    * process.
@@ -32,7 +50,7 @@ public:
   /**
    * @brief Updates the rendering logic.
    *
-   * Performs rendering operations using the initialized shaders and VAOs. This
+   * Performs rendering operations using the jobs in the queue. This
    * method should be called in the application's main loop to render each
    * frame.
    *
@@ -43,17 +61,16 @@ public:
   /**
    * @brief Destroys rendering resources.
    *
-   * Cleans up all resources associated with rendering, including shaders and
-   * VAOs. This method should be called to properly release resources before the
-   * application exits.
-   *
    * @return STATUS indicating the success of the resource cleanup.
    */
   STATUS Destroy();
 
 private:
-  VertexArrayObject m_testVAO;
-  Shader m_testShader;
+  EVENT_HANDLER OnQueueRender(const Event &e);
+
+  RendererBase *m_renderers[RENDERER_TYPES_MAX];
+  ComponentRenderable *m_renderQueue[RENDERER_QUEUE_MAX];
+  UINT16 m_queueInsertPosition;
 };
 
 #endif /* RENDERER_H */
