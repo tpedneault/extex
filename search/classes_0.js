@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['componentbase_0',['ComponentBase',['../classComponentBase.html',1,'']]]
+  ['background_0',['Background',['../classBackground.html',1,'']]]
 ];

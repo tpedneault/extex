@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['positions_0',['POSITIONS',['../vbo_8hpp.html#a5e73adb4ea3e5c3e473d555a89e71d1fa372a82f5ce3a8ee640867598ee2ddaf7',1,'vbo.hpp']]]
+  ['renderer_5fbackground_0',['RENDERER_BACKGROUND',['../component_8hpp.html#a6c2ae437d674332e3776fffeac190077ad1c8bac2fe15eebd4a8e34151b131531',1,'component.hpp']]],
+  ['renderer_5ftypes_5fmax_1',['RENDERER_TYPES_MAX',['../component_8hpp.html#a6c2ae437d674332e3776fffeac190077aefe76181642cbac3d280e3814afbdb9a',1,'component.hpp']]]
 ];

@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['textrenderingjob_0',['TextRenderingJob',['../classTextRenderingJob.html',1,'']]]
+  ['vertexarrayobject_0',['VertexArrayObject',['../classVertexArrayObject.html',1,'']]],
+  ['vertexattributedata_1',['VertexAttributeData',['../structVertexAttributeData.html',1,'']]],
+  ['vertexbufferobject_2',['VertexBufferObject',['../classVertexBufferObject.html',1,'']]]
 ];

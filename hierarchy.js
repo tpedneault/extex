@@ -1,14 +1,22 @@
 var hierarchy =
 [
     [ "ComponentBase", "classComponentBase.html", [
-      [ "Renderer", "classRenderer.html", null ],
-      [ "Window", "classWindow.html", null ]
+      [ "ComponentPubSub", "classComponentPubSub.html", [
+        [ "Editor", "classEditor.html", null ],
+        [ "Renderer", "classRenderer.html", null ],
+        [ "Window", "classWindow.html", null ]
+      ] ],
+      [ "ComponentRenderable", "classComponentRenderable.html", [
+        [ "Background", "classBackground.html", null ]
+      ] ]
     ] ],
+    [ "Event", "structEvent.html", null ],
+    [ "EventBus", "classEventBus.html", null ],
+    [ "EventListenerEntry", "structEventListenerEntry.html", null ],
     [ "ExtexApplication", "classExtexApplication.html", null ],
     [ "Font", "classFont.html", null ],
-    [ "RenderingJob", "classRenderingJob.html", [
-      [ "ModelRenderingJob", "classModelRenderingJob.html", null ],
-      [ "TextRenderingJob", "classTextRenderingJob.html", null ]
+    [ "RendererBase", "classRendererBase.html", [
+      [ "RendererBackground", "classRendererBackground.html", null ]
     ] ],
     [ "Shader", "classShader.html", null ],
     [ "VertexArrayObject", "classVertexArrayObject.html", null ],

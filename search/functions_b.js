@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['unbind_0',['Unbind',['../classShader.html#aa53965ba78cf36b664e1f53d337b1b0b',1,'Shader::Unbind()'],['../classVertexArrayObject.html#a330c0c1f4f4e74a6212e60066d0d25ff',1,'VertexArrayObject::Unbind()'],['../classVertexBufferObject.html#a2b50bc2954395c18c17ad21578d5f490',1,'VertexBufferObject::Unbind()']]],
-  ['update_1',['Update',['../classComponentBase.html#a4fea7150263484683d743f579e1e3498',1,'ComponentBase::Update()'],['../classWindow.html#af12f38c1ed7c1286007831c4c24caa44',1,'Window::Update()'],['../classRenderer.html#a45115c6fe1061cc60d477dda38200ff8',1,'Renderer::Update()']]]
+  ['render_0',['Render',['../classRendererBackground.html#abf8d3b4b45a7cd93a2e7d36922d0473d',1,'RendererBackground::Render()'],['../classRendererBase.html#a6f3102f4285358fd15fc76d4c90488f0',1,'RendererBase::Render()']]],
+  ['renderer_1',['Renderer',['../classRenderer.html#a7ebf46f54dab9905f79b80f7fddb76a6',1,'Renderer']]]
 ];

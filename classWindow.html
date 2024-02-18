@@ -109,7 +109,8 @@ Inheritance diagram for Window:</div>
  <div class="center">
   <img src="classWindow.png" usemap="#Window_map" alt=""/>
   <map id="Window_map" name="Window_map">
-<area href="classComponentBase.html" alt="ComponentBase" shape="rect" coords="0,0,103,24"/>
+<area href="classComponentPubSub.html" alt="ComponentPubSub" shape="rect" coords="0,56,119,80"/>
+<area href="classComponentBase.html" alt="ComponentBase" shape="rect" coords="0,0,119,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -133,6 +134,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abbd1ec5af7760e75bbf0dbb9ee06e4d6" id="r_abbd1ec5af7760e75bbf0dbb9ee06e4d6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbd1ec5af7760e75bbf0dbb9ee06e4d6">IsWindowOpen</a> ()</td></tr>
 <tr class="memdesc:abbd1ec5af7760e75bbf0dbb9ee06e4d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the GLFW window should close.  <br /></td></tr>
 <tr class="separator:abbd1ec5af7760e75bbf0dbb9ee06e4d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classComponentPubSub"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classComponentPubSub')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classComponentPubSub.html">ComponentPubSub</a></td></tr>
+<tr class="memitem:aa924f84d4f5c67942ff285aa1f1723f3 inherit pub_methods_classComponentPubSub" id="r_aa924f84d4f5c67942ff285aa1f1723f3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComponentPubSub.html#aa924f84d4f5c67942ff285aa1f1723f3">SetEventBus</a> (<a class="el" href="classEventBus.html">EventBus</a> *bus)</td></tr>
+<tr class="separator:aa924f84d4f5c67942ff285aa1f1723f3 inherit pub_methods_classComponentPubSub"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classComponentPubSub"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classComponentPubSub')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classComponentPubSub.html">ComponentPubSub</a></td></tr>
+<tr class="memitem:aa2ea51c519cee29445cbd84d4311fe8d inherit pro_methods_classComponentPubSub" id="r_aa2ea51c519cee29445cbd84d4311fe8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8hpp.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComponentPubSub.html#aa2ea51c519cee29445cbd84d4311fe8d">Subscribe</a> (<a class="el" href="event_8hpp.html#a6c1bd0a72362ca5faf01ed6c0746670d">EVENT_TYPES</a> type, <a class="el" href="event__bus_8hpp.html#ab47d6762eb4c1504ebc2474e9b840626">EventListener</a> listener)</td></tr>
+<tr class="separator:aa2ea51c519cee29445cbd84d4311fe8d inherit pro_methods_classComponentPubSub"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22ffc1fcefa8bd8dd5dc4fa9f46888f3 inherit pro_methods_classComponentPubSub" id="r_a22ffc1fcefa8bd8dd5dc4fa9f46888f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8hpp.html#a32c27cc471df37f4fc818d65de0a56c4">STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComponentPubSub.html#a22ffc1fcefa8bd8dd5dc4fa9f46888f3">Publish</a> (const <a class="el" href="structEvent.html">Event</a> &amp;event)</td></tr>
+<tr class="separator:a22ffc1fcefa8bd8dd5dc4fa9f46888f3 inherit pro_methods_classComponentPubSub"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classComponentPubSub"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classComponentPubSub')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classComponentPubSub.html">ComponentPubSub</a></td></tr>
+<tr class="memitem:afe6f1413cb335d2c5cbfda898ef00882 inherit pro_attribs_classComponentPubSub" id="r_afe6f1413cb335d2c5cbfda898ef00882"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classEventBus.html">EventBus</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComponentPubSub.html#afe6f1413cb335d2c5cbfda898ef00882">m_eventBus</a></td></tr>
+<tr class="separator:afe6f1413cb335d2c5cbfda898ef00882 inherit pro_attribs_classComponentPubSub"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manages a GLFW window and its context. </p>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['initialize_5fcomponent_0',['INITIALIZE_COMPONENT',['../application_8cpp.html#a05924f62190e47c7f9c84e81f63cf545',1,'application.cpp']]]
+  ['bind_5fevent_5fhandler_0',['BIND_EVENT_HANDLER',['../event__bus_8hpp.html#a09947a3d82475ac91959652feef39bb6',1,'event_bus.hpp']]]
 ];
